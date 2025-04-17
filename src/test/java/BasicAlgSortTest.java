@@ -1,19 +1,19 @@
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
+import com.example.BasicAlgSort;
+import org.junit.jupiter.api.Test;
 import java.util.Random;
 
-import static org.assertj.core.api.Assertions.assertThat;
 class BasicAlgSortTest {
 
     @Test
     public void testBubbleSortWhenArraysWithIntegerTypesAndRangeEqualsLength(){
         Integer [] sourceArray = new Integer[] {5,4,10,2,1};
         Integer [] destArray = new Integer[] {1,2,4,5,10};
-        BasicAlgSort<Integer>integerBasicAlgSort= new BasicAlgSort<>(sourceArray);
+        BasicAlgSort<Integer> integerBasicAlgSort= new BasicAlgSort<>(sourceArray);
         integerBasicAlgSort.bubbleSortAsc();
         assertThat(integerBasicAlgSort.getArray()).isEqualTo(destArray);
     }
-
 
     @Test
     public void testSelectionSortWhenArraysWithIntegerTypesAndRangeEqualsLength(){
@@ -50,5 +50,7 @@ class BasicAlgSortTest {
         }
         return sourceArray;
     }
+
+
 
 }
